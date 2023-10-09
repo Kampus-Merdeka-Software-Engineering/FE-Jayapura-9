@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- font Awesome icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../assets/css/location.css" />
+    <title>Navbar</title>
+  </head>
+
+  <body>
+    <!-- Start Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="../assets/images/logo-growwise.svg" alt="" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="./pages/about.html">About</a></li>
+        <li class="dropdown">
+          <a href="#">Program <i class="ri-arrow-down-s-line"></i></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/pages/program/web-developer.html">WEB Developer</a>
+            </li>
+            <li>
+              <a href="/pages/program/app-developer.html">App Developer</a>
+            </li>
+            <li>
+              <a href="/pages/program/devops-engineer.html">Devops Engineer</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Location</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Star Hero-About -->
+    <section class="about">
+      <div class="content-about">
+        <h1>GrowWise.id</h1>
+        <p>
+          Yuk, gabung di platform kami untuk mengeksplorasi dunia skill software
+          engineering secara mendalam dan seru! Ayo bergabung, kita bisa belajar
+          bersama dalam suasana yang asyik dan menghibur. Jangan lewatkan
+          kesempatan ini, segera bergabung sekarang! 😃🚀
+        </p>
+        <button class="btn btn-primary">Join Us</button>
+      </div>
+      <img
+        src="../assets/img/hero-img-location.png"
+        alt="hero-about"
+        srcset=""
+      />
+    </section>
+    <!-- end hero  -->
+
+    <!-- star advantages -->
+    <section class="advantages">
+      <h1>#Advantages of on-site course</h1>
+      <div class="ad-box">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2>Interaksi yang lebih efektif dan kolaboratif</h2>
+            </div>
+            <div class="card-back">
+              <p>
+                Mengikuti kelas secara langsung dapat memperkuat komunikasi yang
+                efektif, menciptakan suasana yang lebih ramah dan memudahkan
+                untuk berkolaborasi dan belajar dengan lebih baik bersama-sama.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2>Aksesibilitas yang menyenangkan</h2>
+            </div>
+            <div class="card-back">
+              <p>
+                Kamu dapat menggunakan fasilitas yang tersedia yang tidak bisa
+                didapatkan saat kelas online.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2>Fasilitas yang nyaman dan moderen</h2>
+            </div>
+            <div class="card-back">
+              <p>Fasilitas yang nyaman dengan suasana yang mendukung</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end advantages -->
+
+    <!-- start gallery -->
+    <section class="photo">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="../assets/img/img-gallery2.jpg" alt="Image 1" />
+          <img src="../assets/img/img-gallery3.jpg" alt="Image 2" />
+          <img src="../assets/img/img-gallery4.jpg" alt="Image 3" />
+        </div>
+        <div class="mySlides fade">
+          <img src="../assets/img/img-gallery5.jpg" alt="Image 4" />
+          <img src="../assets/img/img-gallery6.jpg" alt="Image 5" />
+          <img src="../assets/img/img-gallery7.jpg" alt="Image 6" />
+        </div>
+      </div>
+      <br />
+      <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+    <!-- end gallery -->
+
+    <!-- start location -->
+    <section class="program-location">
+      <div class="container">
+        <h1 class="title">#On-site Program#</h1>
+        <!-- <p>
+            Our team are experts in the world of software engineering. With our
+            experience and commitment, you're in good hands for success in
+            technology.
+          </p> -->
+        <br />
+        <div class="location-container">
+          <div class="location" data-name="Jakarta">
+            <img src="../assets/img/jkt-location.jpg" alt="profile" />
+            <h3>Jakarta</h3>
+            <div class="address">
+              Jl. Senopati No. 123, Jakarta Selatan, Jakarta, Indonesia 12345
+            </div>
+            <button class="button-link-schedule" onclick="openModal()">
+              Register Now
+            </button>
+          </div>
+
+          <div class="location" data-name="Bandung">
+            <img src="../assets/img/bandung-location.jpg" alt="profile" />
+            <h3>Bandung</h3>
+            <div class="address">
+              Jl. Antapani No.36, Kota Bandung, Jawa Barat, Indonesia 60977
+            </div>
+            <button class="button-link-schedule" onclick="openModal()">
+              Register Now
+            </button>
+          </div>
+
+          <div class="location" data-name="Medan">
+            <img src="../assets/img/medan-location.jpg" alt="profile" />
+            <h3>Medan</h3>
+            <div class="address">
+              Jl. Kangkung No. 27, Kota Medan, Sumatra Utara, Indonesia 22345
+            </div>
+            <button class="button-link-schedule" onclick="openModal()">
+              Register Now
+            </button>
+          </div>
+          <div class="location" data-name="Jayapura">
+            <img src="../assets/img/jayapura-location.jpg" alt="profile" />
+            <h3>Jayapura</h3>
+            <div class="address">
+              Jl. Melati No. 20, Kota Jayapura, Papua, Indonesia 92345
+            </div>
+            <button class="button-link-schedule" onclick="openModal()">
+              Register Now
+            </button>
+          </div>
+        </div>
+        <br />
+        <div class="location-container"></div>
+        <br />
+      </div>
+    </section>
+
+    <!-- start modal -->
+    <section class="modalpopup">
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h3>Registration Form</h3>
+          <form id="registrationForm" action="/register" method="post">
+            <div class="group-form">
+              <div class="class-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="class-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+            <div class="group-form">
+              <div class="class-form">
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pass" required />
+              </div>
+              <div class="class-form">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+            </div>
+            <div class="group-form">
+              <div class="class-form">
+                <label for="class">Class:</label>
+                <select id="class" name="kelas" required>
+                  <option value="">Select program</option>
+                  <option value="appdeveloper">App Developer</option>
+                  <option value="webdeveloper">Web Developer</option>
+                  <option value="devopsengineer">DevOps Engineer</option>
+                </select>
+              </div>
+              <div class="class-form">
+                <label for="dates">Date:</label>
+                <select id="dates" name="dates" required>
+                  <option value="">Select date</option>
+                  <option value="23-05-04">23-05-04</option>
+                  <option value="24-06-07">24-06-07</option>
+                </select>
+              </div>
+            </div>
+            <div class="group-button">
+              <button type="submit" onclick="submitForm()">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- end modal -->
+
+    <!-- start team company -->
+    <div class="team-container">
+      <div class="intro-team">
+        <h1 class="title">Meet Our Team</h1>
+        <p>
+          Our team are experts in the world of software engineering. With our
+          experience and commitment, you're in good hands for success in
+          technology.
+        </p>
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <ul class="carousel">
+            <li class="card">
+              <div class="img">
+                <img
+                  src="../assets/img/img-6.jpg"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h2>Najib Alfarizi</h2>
+              <span>Project Leader</span>
+              <div class="social-media">
+                <a href="http://">LinkEdin</a>
+                <a href="http://">Github</a>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img src="../assets/img/alif.jpg" alt="img" draggable="false" />
+              </div>
+              <h2>Alif Sahputra</h2>
+              <span>Front End Engineer</span>
+              <div class="social-media">
+                <a href="http://">LinkEdin</a>
+                <a href="http://">Github</a>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img
+                  src="../assets/img/ilma.jpeg"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h2>Ilma Dzakiah</h2>
+              <span>Front End Engineer</span>
+              <div class="social-media">
+                <a href="http://">LinkEdin</a>
+                <a href="http://">Github</a>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img
+                  src="../assets/img/img-4.jpg"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h2>Yobel Simon M</h2>
+              <span>Backend Engineer</span>
+              <div class="social-media">
+                <a href="http://">LinkEdin</a>
+                <a href="http://">Github</a>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img
+                  src="../assets/img/sekar.jpg"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h2>Sekar Fajrina</h2>
+              <span>Backend Engineer</span>
+              <div class="social-media">
+                <a href="http://">LinkEdin</a>
+                <a href="http://">Github</a>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img
+                  src="../assets/img/img-1.jpg"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h2>Indah Khurul Ain</h2>
+              <span>Quality Ansurance</span>
+              <div class="social-media">
+                <a href="http://">LinkEdin</a>
+                <a href="http://">Github</a>
+              </div>
+            </li>
+          </ul>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+    </div>
+    <!-- end team company -->
+
+    <!--start content alumni-->
+    <section class="testimonials container">
+      <div class="section-title">
+        <h2>What are our alumni saying?</h2>
+      </div>
+      <div class="testimonial-slider">
+        <div class="testimonial-card">
+          <div class="header">
+            <img
+              src="https://assets.codepen.io/5126815/image-jeanette.jpg"
+              alt="Jeanette Harmon"
+              class="avatar"
+            />
+            <div class="details">
+              <div class="name">Jeanette Harmon</div>
+              <div class="status">Verified Graduate</div>
+            </div>
+          </div>
+          <div class="title">An overall wonderful and rewarding experience</div>
+          <div class="quote">
+            Thank you for the wonderful experience! I now have a job I really
+            enjoy, and make a good living while doing something I love.
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="header">
+            <img
+              src="https://assets.codepen.io/5126815/image-jeanette.jpg"
+              alt="Jeanette Harmon"
+              class="avatar"
+            />
+            <div class="details">
+              <div class="name">Sarah T</div>
+              <div class="status">College Student</div>
+            </div>
+          </div>
+          <div class="title">An overall wonderful and rewarding experience</div>
+          <div class="quote">
+            Saya tidak pernah berpikir bahwa saya bisa belajar pemrograman
+            dengan begitu mudah dan menyenangkan. Materi yang disediakan sangat
+            jelas dan tutorialnya sangat interaktif. Sekarang saya merasa lebih
+            percaya diri dalam mengembangkan proyek-proyek saya sendiri
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="header">
+            <img
+              src="https://assets.codepen.io/5126815/image-jeanette.jpg"
+              alt="Jeanette Harmon"
+              class="avatar"
+            />
+            <div class="details">
+              <div class="name">So Hyun</div>
+              <div class="status">Verified Graduate</div>
+            </div>
+          </div>
+          <div class="title">An overall wonderful and rewarding experience</div>
+          <div class="quote">
+            I've tried several coding learning platforms before, but none
+            compare to this app. It's interactive, hands-on, and has a great
+            community for sharing ideas and getting support. I've achieved so
+            much in a short time thanks to this app!"
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="header">
+            <img
+              src="https://assets.codepen.io/5126815/image-jeanette.jpg"
+              alt="Jeanette Harmon"
+              class="avatar"
+            />
+            <div class="details">
+              <div class="name">Faisal K</div>
+              <div class="status">Verified Graduate</div>
+            </div>
+          </div>
+          <div class="title">An overall wonderful and rewarding experience</div>
+          <div class="quote">
+            Aplikasi ini mengubah pandangan saya sepenuhnya. Mereka memecah
+            konsep-konsep sulit menjadi langkah-langkah sederhana, dan sekarang
+            saya dapat membuat aplikasi mobile sendiri!
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="header">
+            <img
+              src="https://assets.codepen.io/5126815/image-jeanette.jpg"
+              alt="Jeanette Harmon"
+              class="avatar"
+            />
+            <div class="details">
+              <div class="name">Amanda K</div>
+              <div class="status">Freelance</div>
+            </div>
+          </div>
+          <div class="title">An overall wonderful and rewarding experience</div>
+          <div class="quote">
+            This app is incredibly supportive with easy-to-follow modules and
+            non-technical language. I've already built several small websites!"
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="header">
+            <img
+              src="https://assets.codepen.io/5126815/image-jeanette.jpg"
+              alt="Jeanette Harmon"
+              class="avatar"
+            />
+            <div class="details">
+              <div class="name">Lisa W</div>
+              <div class="status">College Student</div>
+            </div>
+          </div>
+          <div class="title">An overall wonderful and rewarding experience</div>
+          <div class="quote">
+            This coding learning app allows me to set my own study schedule, and
+            the contect is highly comprehensive. Now i feel better prepared for
+            a career in the tech Industry.
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end content alumni-->
+
+    <!-- start footer -->
+    <footer class="footer">
+      <div class="footer-address">
+        <h1 class="footer-logo">
+          <img src="../assets/images/logo-growwise.svg" alt="" />
+        </h1>
+
+        <h2>Contact</h2>
+
+        <address>
+          5534 Somewhere In. The World 22193-10212<br />
+
+          <a class="footer-btn" href="mailto:example@gmail.com">Email Us</a>
+        </address>
+      </div>
+      <ul class="footer-nav">
+        <li class="nav-item">
+          <h2 class="nav-title">About</h2>
+          <ul class="nav-ul">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Location</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <h2 class="nav-title">Program</h2>
+          <ul class="nav-ul">
+            <li>
+              <a href="#">WEB Developer</a>
+            </li>
+            <li>
+              <a href="#">App Developer</a>
+            </li>
+            <li>
+              <a href="#">Devops Engineer</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <h2 class="nav-title">Social Media</h2>
+          <ul class="nav-ul">
+            <li>
+              <a href="#">Facebook</a>
+            </li>
+            <li>
+              <a href="#">Instagram</a>
+            </li>
+            <li>
+              <a href="#">Linkedin</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <h2 class="nav-title">Legal</h2>
+          <ul class="nav-ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="legal">
+        <p>&copy; 2023. Team E Section Jayapura All rights reserved.</p>
+
+        <div class="legal-links">
+          <span
+            >Made with <span class="heart">♥</span> remotely from Anywhere</span
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- Script JS -->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

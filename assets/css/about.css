@@ -1,0 +1,814 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+}
+
+.container {
+  margin: auto;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Sora', sans-serif;
+  border: none;
+  border-radius: 8px;
+  height: 45px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ff6700;
+  color: #fff;
+}
+
+/* Style for the navbar */
+.navbar {
+  background-color: #fff;
+  color: #051923;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #051923;
+  font-weight: 400;
+}
+
+.nav-links a:hover {
+  color: #ff6700;
+}
+
+.nav-links a::after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px #ff6700;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  margin-top: 5px;
+}
+
+.nav-links a:hover:after {
+  transform: scaleX(1);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  list-style: none;
+  top: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  left: 0;
+  width: 250px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 3px 0;
+}
+
+/* style for about-home */
+.about {
+  background-color: #004E98;
+  color: #FFF;
+}
+
+.about .inner-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+}
+
+/* Gaya untuk konten CTA (sebelah kiri) */
+.about .about-text {
+  flex: 1;
+  place-self: center;
+  font-size: 32px;
+  /* Jarak antara konten dan gambar */
+}
+
+/* Gaya untuk title CTA */
+.about .about-text h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Gaya untuk paragraf CTA */
+.about .about-text p {
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  letter-spacing: -0.6px;
+  margin-top: 20px;
+}
+
+/* Gaya untuk tombol CTA */
+.about .btn {
+  margin-top: 24px;
+}
+
+.about-image {
+  text-align: center;
+  flex: 1;
+}
+
+/* Gaya untuk gambar CTA (sebelah kanan) */
+.about-image img {
+  max-width: 80%;
+  height: 80%;
+  border-radius: 10px;
+}
+
+/* style for motto company */
+.motto {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-motto .motto {
+  width: 100%;
+}
+
+.motto p {
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Style for CTA */
+.culture {
+  background-color: #C0C0C0;
+  color: #000;
+}
+
+.culture .inner-culture {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 0;
+}
+
+/* Gaya untuk konten CTA (sebelah kiri) */
+.culture .culture-text {
+  place-self: center;
+  /* Jarak antara konten dan gambar */
+  padding-left: 20px;
+}
+
+/* Gaya untuk title CTA */
+.culture .culture-text h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Gaya untuk paragraf CTA */
+.culture .culture-text p {
+  color: #000;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  letter-spacing: -0.6px;
+  margin-top: 20px;
+}
+
+.culture .culture-text ul {
+  padding-left: 20px;
+  color: #000;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  letter-spacing: -0.6px;
+}
+
+.culture-image {
+  text-align: left;
+  flex-basis: fit-content;
+}
+
+/* Gaya untuk gambar CTA (sebelah kanan) */
+.culture-image img {
+  max-width: 100%;
+  height: 80%;
+}
+
+/* Style for our contribution */
+.our-contribution {
+  background-color: #004E98;
+  padding: 100px 0px;
+}
+
+.our-contribution h1 {
+  margin-bottom: 64px;
+  color: #FFF;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.our-contribution .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-contribution .highlight-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.our-contribution .highlight-box.border-center {
+  border-width: 0 1px;
+  border-color: #FFF;
+  border-style: solid;
+}
+
+.our-contribution .highlight-box h2 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.our-contribution .highlight-box p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* style for team */
+.team-company {
+  margin-top: 20px;
+  padding: 100px 0px;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: #444;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.container .team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.container .team-container .team {
+  text-align: center;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  outline-offset: -1.5rem;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+.container .team-container .team:hover {
+  outline-offset: 0;
+}
+
+.container .team-container .team img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
+  transition: .3s ease;
+}
+
+.container .team-container .team img:hover {
+  transform: scale(1.2);
+  border-radius: 1.2rem;
+}
+
+.container .team-container .team h3 {
+  padding: .5rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.container .team-container .team .job {
+  font-size: .8rem;
+}
+
+.team-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-preview .preview {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  margin: 2rem;
+  width: 40rem;
+}
+
+.team-preview .preview.active {
+  display: inline-block;
+}
+
+.team-preview .preview img {
+  height: 30rem;
+}
+
+.team-preview .preview .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  color: #444;
+  font-size: 4rem;
+}
+
+.team-preview .preview .fa-times:hover {
+  transform: rotate(90deg);
+}
+
+.team-preview .preview h3 {
+  color: #444;
+  padding: .5rem 0;
+  font-size: 2.5rem;
+}
+
+.team-preview .preview p {
+  line-height: 1.5;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.team-preview .preview .buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.team-preview .preview .buttons a {
+  flex: 1 1 16rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: #444;
+  border: .1rem solid #444;
+}
+
+/* style for form container */
+.form {
+  max-width: 1000px;
+  border-radius: 1rem;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 120px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-case {
+  width: 100%;
+  max-width: 500px;
+  padding-right: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.2);
+}
+
+/* Style for footer */
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 120px 50px 20px 50px;
+  color: #2f2f2f;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer>* {
+  flex: 1 100%;
+}
+
+.footer-address {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer-logo {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer-address h2 {
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+  margin-top: 8px;
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 8px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 12px 24px;
+  transition: background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer-nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer-nav>* {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav-ul a {
+  color: #999;
+}
+
+.nav-ul-extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+
+.legal-links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+
+
+/* Responsiveness for Tablet */
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    padding: 20px 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    transition: all 0.3s ease-in;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 24px 29px 0px;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .about .inner-about {
+    flex-direction: column;
+  }
+
+  .motto {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .motto p {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* style for about company */
+  .about-company {
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content .about-company img {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .hero-company {
+    margin: 10px 20px;
+    padding: 10px;
+  }
+
+  .hero-company h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .hero-company p {
+    font-size: 14px;
+  }
+
+  .about-company img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .culture .inner-culture {
+    flex-direction: column;
+  }
+
+
+  /* style for contribution */
+  .our-contribution h1 {
+    font-size: 32px;
+  }
+
+  .our-contribution .container {
+    flex-direction: column;
+  }
+
+  .our-contribution .highlight-box {
+    padding: 20px;
+  }
+
+  .our-contribution .highlight-box.highlight-box.border-center {
+    border-width: 1px;
+    border-color: #FFF;
+    border-style: solid;
+  }
+
+  .our-contribution .highlight-box h2 {
+    font-size: 32px;
+  }
+
+  .our-contribution .highlight-box p {
+    font-size: 16px;
+  }
+
+
+}
+
+/* Responsiveness for Handphone */
+@media (max-width: 768px) {
+
+  /* style for motto */
+  .motto p {
+    margin-top: 2rem;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* style for about-company */
+  .content .about-company {
+    height: 20vh;
+  }
+
+  .content .about-company img {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  .content .hero-company {
+    max-width: 300px;
+    margin-left: -50px;
+    padding: 10px;
+  }
+
+  .content .hero-company h3 {
+    font-size: 16px;
+  }
+
+  .content .hero-company p {
+    display: none;
+  }
+
+
+  /* style for team */
+  .team-company {
+    margin-top: -30px;
+  }
+
+  /* style for form */
+  .form {
+    margin-top: -50px;
+  }
+
+  .form h1 {
+    padding-bottom: 2em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal-links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer-nav>* {
+    flex: 1;
+  }
+
+  .nav-item-extra {
+    flex-grow: 2;
+  }
+
+  .footer-address {
+    flex: 1 0px;
+  }
+
+  .footer-nav {
+    flex: 2 0px;
+  }
+}
