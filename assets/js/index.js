@@ -1,11 +1,56 @@
 // Fetch data untuk header
-function fetchHeaderData() {
-  fetch("")
+// function fetchHeaderData() {
+//   fetch("")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       const headerElement = document.querySelector("header .header-text");
+//       headerElement.querySelector("h1").textContent = data.title;
+//       headerElement.querySelector("p").textContent = data.description;
+//     })
+//     .catch((error) => console.error("Error fetching header data:", error));
+// }
+
+function postContactFormData(event) {
+  event.preventDefault();
+
+  // Ambil data dari form
+  const form = event.target;
+  const name = form.querySelector('[name="name"]').value;
+  const email = form.querySelector('[name="email"]').value;
+  const phone = form.querySelector('[name="phone"]').value;
+  const company = form.querySelector('[name="company"]').value;
+  const message = form.querySelector('[name="message"]').value;
+
+  // Buat objek data
+  const data = {
+    name: name,
+    email: email,
+    phone: phone,
+    company: company,
+    message: message
+  };
+
+  // Kirim data sebagai JSON
+  fetch("http://localhost:3000/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
     .then((response) => response.json())
     .then((data) => {
-      const headerElement = document.querySelector("header .header-text");
-      headerElement.querySelector("h1").textContent = data.title;
-      headerElement.querySelector("p").textContent = data.description;
+      if (data.success) {
+        alert("Terima kasih! Pesan Anda telah terkirim.");
+        form.reset();
+      } else {
+        alert("Maaf, terjadi kesalahan. Silakan coba lagi.");
+      }
     })
-    .catch((error) => console.error("Error fetching header data:", error));
+    .catch((error) => console.error("Error sending contact data:", error));
 }
+
+// Event listener untuk form submission
+document
+  .querySelector(".contact-form form")
+  .addEventListener("submit", postContactFormData);
