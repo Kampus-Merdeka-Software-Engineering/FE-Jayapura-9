@@ -91,5 +91,5 @@ function postRegisterFormData(event) {
 
 // Event listener untuk form submission
 document
-  .querySelector(".registration-form",".contact-form")
-  .addEventListener("submit", postContactFormData ,postRegisterFormData);
+  .querySelector(".registration-form")
+  .addEventListener("submit", postRegisterFormData);
