@@ -7,7 +7,7 @@ function postRegisterFormData(event) {
     const email = form.querySelector('[name="email"]').value;
     const pass = form.querySelector('[name="pass"]').value;
     const phone = form.querySelector('[name="phone"]').value;
-    const kelas = form.querySelector('[name="message"]').value;
+    const kelas = form.querySelector('[name="kelas"]').value;
     const dates = form.querySelector('[name="dates"]').value;
 
   // Buat objek data
