@@ -19,7 +19,7 @@ function postContactFormData(event) {
   };
 
   // Kirim data sebagai JSON
-  fetch("http://localhost:3000/contact", {
+  fetch("be-jayapura-9-production.up.railway.app/contact", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -68,7 +68,7 @@ function postRegisterFormData(event) {
   };
 
   // Kirim data sebagai JSON
-  fetch("http://localhost:3000/register", {
+  fetch("be-jayapura-9-production.up.railway.app/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
