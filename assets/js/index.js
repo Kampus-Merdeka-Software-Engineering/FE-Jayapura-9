@@ -39,9 +39,9 @@ function postContactFormData(event) {
 }
 
 // Event listener untuk form submission
-document
-  .querySelector(".contact-form")
-  .addEventListener("submit", postContactFormData);
+// document
+//   .querySelector(".contact-form")
+//   .addEventListener("submit", postContactFormData);
 
 
 // function menyimpan data register
@@ -91,5 +91,5 @@ function postRegisterFormData(event) {
 
 // Event listener untuk form submission
 document
-  .querySelector(".registration-form")
-  .addEventListener("submit", postRegisterFormData);
+  .querySelector(".contact-form", ".registration-form")
+  .addEventListener("submit", postContactFormData, postRegisterFormData);
